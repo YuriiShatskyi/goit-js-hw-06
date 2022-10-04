@@ -9,14 +9,6 @@ const refs = {
   divBoxes: document.querySelector('#boxes'),
 }
 
-console.log(refs.input);
-console.log(refs.buttonCreate);
-console.log(refs.buttondestroy);
-console.log(refs.divBoxes);
-
-
-
-
 refs.input.addEventListener('input', (event) => event.currentTarget.value);
 
 refs.buttonCreate.addEventListener('click', () => {
@@ -36,5 +28,5 @@ refs.buttonCreate.addEventListener('click', () => {
 );
 
 refs.buttonDestroy.addEventListener('click', () => {
-  refs.divBoxes.textContent = '';
+    refs.divBoxes.textContent = '';
 });
