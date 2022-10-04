@@ -36,5 +36,5 @@ refs.buttonCreate.addEventListener('click', () => {
 );
 
 refs.buttondestroy.addEventListener('click', () => {
-    refs.divBoxes.textContent = '';
+  refs.divBoxes.textContent = '';
 });
