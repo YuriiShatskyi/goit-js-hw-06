@@ -35,6 +35,7 @@ refs.buttonCreate.addEventListener('click', () => {
 }
 );
 
-refs.buttondestroy.addEventListener('click', () => {
+refs.buttonDestroy.addEventListener('click', () => {  
   refs.divBoxes.textContent = '';
+
 });
