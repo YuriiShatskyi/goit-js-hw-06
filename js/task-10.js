@@ -14,8 +14,27 @@ console.log(refs.buttonCreate);
 console.log(refs.buttondestroy);
 console.log(refs.divBoxes);
 
-refs.buttonCreate.addEventListener('click', createBoxes);
 
-function createBoxes(amount) {  
+
+
+refs.input.addEventListener('input', (event) => event.currentTarget.value);
+
+refs.buttonCreate.addEventListener('click', () => {
+
+  for (let i = 1; i <= refs.input.value; i += 1) {
+
+    const divBox = document.createElement('div');
+    refs.divBoxes.append(divBox);
+    
+    divBox.style.display = 'inline-flex';
+    divBox.style.width = 10 * (2 + i) + 'px';
+    divBox.style.height = 10 * (2 + i) + 'px';
+    divBox.style.backgroundColor = getRandomHexColor();
+
+  }
 }
+);
 
+refs.buttondestroy.addEventListener('click', () => {
+    refs.divBoxes.textContent = '';
+});
